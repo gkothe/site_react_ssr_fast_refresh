@@ -1,33 +1,12 @@
-# React Server Side Rendering with Redux - Example App
+# React Server Side Rendering with Redux - Example App - Testing React Refresh
 
 Example of the universal React app for the blog post purpose.
 
-## Installation
+No production config made..
 
-After you clone the repo, install all the necessary npm dependencies:
 
-```
-npm install
-```
+yarn install 
+yarn devo (for start with watch), gonna throw an error at first because there is no file buid, w8 a little for the build to happen, then it will start. 
+or 
+yarn start (without watch)
 
-or
-
-```
-yarn
-```
-
-## Running the App
-
-To run the App, just use `npm run`:
-
-```
-npm run start
-```
-
-or
-
-```
-yarn start
-```
-
-Then, open the page [http://localhost:3000](http://localhost:3000) in your web browser.
