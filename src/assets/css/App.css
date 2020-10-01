@@ -1,0 +1,273 @@
+:root {
+  --color1: #8B0000;
+  --color2: #F1EEE7;
+  --color3: white;
+  --color4: #858585;
+  --color5: #2CB200;
+  --color6: red;
+  --color7: #EEEEEE;
+}
+
+body {
+  overflow: auto;
+  margin  : 0
+}
+
+/* #root {
+    height: 100vh;
+  }
+   */
+#main {
+  -webkit-overflow-scrolling: touch;
+  overflow                  : hidden;
+}
+
+#containImag {
+  width          : 100%;
+  align-items    : center;
+  justify-content: center;
+  display        : flex;
+  flex-direction : column;
+  padding-bottom : 40%;
+  margin-top     : 100px;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+
+
+.info-titulo2 {
+  font-size     : 17px;
+  padding       : 10px 15px;
+  display       : block;
+  text-transform: uppercase;
+  color         : #ffffff;
+  font-family   : 'Roboto-Condensed';
+  float         : right;
+  margin-right  : 10px;
+}
+
+.autoMargin5>* {
+  margin: 5px;
+}
+
+
+.gridopcoes {
+  /* grid-template-columns:   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+
+}
+
+.gridpagamentos {
+  grid-template-columns: max-content max-content;
+}
+
+
+
+*:focus {
+  outline: none;
+}
+
+.cellselect:hover {
+  border-color: var(--color1) !important;
+  border-style: solid;
+  border-width: 0.5mm;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 7.5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow   : inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background   : var(--color1);
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 879px) {
+  .info-menu-phone {
+    display       : flex;
+    flex-direction: column;
+
+    justify-content: center;
+  }
+
+
+
+  .menu-local-phone {
+    display: inline-block;
+    width  : 100%;
+  }
+
+  .carrinhoPriceMob {
+    align-self: auto;
+  }
+
+  .sumirmobile {
+    display: none !important;
+  }
+
+  .unitPrecoMob {
+    align-self: flex-start !important;
+  }
+
+  .totalcarrinho {
+    justify-content: flex-start !important;
+  }
+
+  .mobilefooter_1 {
+    flex-direction: column !important;
+  }
+
+  .mobilefooter_3 {
+    height: 175px !important;
+  }
+
+  .gridpagamentos {
+    grid-template-columns: max-content !important;
+    margin-bottom        : 20px;
+  }
+
+  .margin10Mob {
+    margin: 10px !important;
+  }
+
+  .showMob {
+    display: block !important;
+  }
+
+  .gridopcoes {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+  }
+
+  .addsubcarMob {
+    width          : auto !important;
+    justify-content: flex-end !important;
+  }
+
+  .toColumnMob {
+    flex-direction: column !important;
+  }
+
+  .noMarginMob {
+    margin: 0 !important;
+  }
+
+  .mobilefooter_2 {
+    display           : flex !important;
+    justify-content   : center !important;
+    align-content     : center !important;
+    align-self        : flex-start !important;
+    flex              : 1 !important;
+    /* margin-top     : 20px; */
+    flex-direction    : column !important;
+  }
+
+  .mobilefooter_2>* {
+    margin: 5px !important;
+  }
+
+  .wrapperpesquisa {
+    width: 100% !important;
+  }
+
+  .imgDetalheProd {
+    max-height: 300px !important;
+  }
+
+  .carrinhoflutuante {
+    position: sticky !important;
+    bottom  : 5px !important;
+    right   : 10px !important;
+    display : flex !important;
+  }
+
+  .info-titulo {
+    text-align    : center;
+    border-bottom : 1px solid #f5f5f5;
+    font-size     : 17px;
+    padding       : 10px 15px;
+    display       : block;
+    text-transform: uppercase;
+    color         : #ffffff;
+    font-family   : 'Roboto-Condensed';
+  }
+
+  .cellopcoesMob {
+    padding-right: 0px !important;
+    margin-right : 0px !important;
+  }
+
+  .menu-mobile-categoria {
+    font-size     : 17px;
+    padding       : 10px;
+    border-bottom : 1px solid black;
+    display       : block;
+    text-transform: uppercase;
+    float         : left;
+    margin-right  : 10px;
+  }
+}
+
+
+@media screen and (min-width: 1400px) {
+  .gridpagamentos {
+    grid-template-columns: max-content max-content max-content !important;
+  }
+}
+
+@media screen and (min-width: 880px) {
+  .topbarsearchcategoria {
+    display: none !important;
+  }
+
+  .wrapperpesquisa {
+    width: 300px !important;
+  }
+
+  .carrinhoflutuante {
+    display: none !important;
+  }
+
+  .sumirdesktop {
+    display: none !important;
+  }
+
+  .menu:hover {
+    text-decoration: underline;
+  }
+
+  .info-titulo {
+    font-size     : 17px;
+    padding       : 10px 15px;
+    border-right  : 1px solid #f5f5f5;
+    display       : block;
+    text-transform: uppercase;
+    color         : #ffffff;
+    font-family   : 'Roboto-Condensed';
+    float         : left;
+    margin-right  : 10px;
+  }
+
+
+}
+
+
+@media screen and (max-width: 570px) {
+
+  .produto {
+    width: 100% !important;
+  }
+}
