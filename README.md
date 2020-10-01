@@ -1,4 +1,4 @@
-# React Server Side Rendering with Redux - Example App - Testing React Refresh
+# React Server Side Rendering with Redux (universal app) - Example App - Testing React Refresh
 
 Example of the universal React app for the blog post purpose.
 
@@ -10,3 +10,7 @@ yarn devo (for start with watch), gonna throw an error at first because there is
 or 
 yarn start (without watch)
 
+
+http://localhost:7777/home
+
+File Home.js for testing 
