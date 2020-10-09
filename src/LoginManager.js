@@ -87,6 +87,7 @@ class LoginManager extends Component {
 const mapDispatchToProps = dispatch => ({
 })
 function mapStateToProps(state) {
+  return {}
 };
 export default connect(mapStateToProps, mapDispatchToProps)(LoginManager);
 
