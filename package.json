@@ -7,7 +7,13 @@
   "license": "MIT",
   "scripts": {
     "clear": "rimraf ./build",
+
+    "start3": "webpack --progress --colors",
+    "dev-server": "nodemon ./server.js localhost 8080",
+    "dev-client": "webpack-dev-server --port 3000",
+
     "start": "npm run clear && webpack && node ./build/server.js",
+    "start2": "webpack-dev-server --hot --mode development --open",
     "devo": "npm-run-all --parallel devo:*",
     "devo:server": "nodemon --watch build --exec \"node build/server.js\"",
     "devo:build": "webpack --watch",
@@ -64,6 +70,7 @@
     "style-loader": "^1.2.1",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
+    "webpack-isomorphic-dev-middleware": "^4.1.0",
     "webpack-merge": "4.2.2",
     "webpack-node-externals": "^2.5.2"
   }

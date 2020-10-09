@@ -6,7 +6,7 @@ const webpack = require('webpack');
 const common = {
 
 };
-
+// process.env.HOT = argv.hot;
 const clientConfig = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
@@ -58,6 +58,8 @@ const clientConfig = {
   entry: {
     client: [
       '@babel/polyfill',
+      'react-refresh/runtime',
+      './entry.js',
       './src/client.js',
     ],
   },
@@ -66,19 +68,21 @@ const clientConfig = {
     path: path.resolve(__dirname, 'build'),
     filename: '[name].js',
   },
-
   optimization: {
-    splitChunks: {
-      cacheGroups: {
-        vendor: {
-          chunks: 'initial',
-          name: 'vendor',
-          test: module => /node_modules/.test(module.resource),
-          enforce: true,
-        },
-      },
-    },
+    runtimeChunk: 'single',
   },
+  // optimization: {
+  //   splitChunks: {
+  //     cacheGroups: {
+  //       vendor: {
+  //         chunks: 'initial',
+  //         name: 'vendor',
+  //         test: module => /node_modules/.test(module.resource),
+  //         enforce: true,
+  //       },
+  //     },
+  //   },
+  // },
 
   devtool: 'cheap-module-source-map',
 
@@ -91,9 +95,22 @@ const clientConfig = {
 
 const serverConfig = {
   // ...common,
-
   module: {
     rules: [
+      {
+        test: /\.[jt]sx?$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: require.resolve('babel-loader'),
+            options: {
+              plugins: [
+                require.resolve('react-refresh/babel'),
+              ].filter(Boolean),
+            },
+          },
+        ],
+      },
       {
         test: /\.jsx?$/,
         loader: 'babel-loader',
@@ -116,7 +133,7 @@ const serverConfig = {
   externals: [nodeExternals()],
 
   entry: {
-    server: ['@babel/polyfill', path.resolve(__dirname, 'src', 'server.js')],
+    server: ['@babel/polyfill', './entry.js',  path.resolve(__dirname, 'src', 'server.js')],
   },
   output: {
     // publicPath: "/",

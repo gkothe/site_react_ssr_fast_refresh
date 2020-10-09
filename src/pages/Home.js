@@ -14,7 +14,7 @@ class Home extends Component {
     return (
       <Grid container justify="center" spacing={0}>
         <Grid item  {...styleGlobal.orientacaoGrid1}   >
-         <Text style={{fontSize:20, color:'blue'}} >{"teste"}</Text>
+         <Text style={{fontSize:20, color:'blue'}} >{"aaassssdddddddddddddddddssss"}</Text>
         </Grid>
       </Grid>
     );
