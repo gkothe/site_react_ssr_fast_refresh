@@ -12,7 +12,7 @@ export const routes = [{
   path: '/home',
   exact: true,
   component: Home,
-},];
+}];
 
 export function match(url) {
   let matchedRoute = null;
@@ -87,6 +87,7 @@ class LoginManager extends Component {
 const mapDispatchToProps = dispatch => ({
 })
 function mapStateToProps(state) {
+  return {}
 };
 export default connect(mapStateToProps, mapDispatchToProps)(LoginManager);
 
